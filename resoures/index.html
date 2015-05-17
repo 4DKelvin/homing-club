@@ -7,7 +7,6 @@
     <title>Homing - 如归国际文化工作营</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/homing.css"/>
-    <link rel="stylesheet" type="text/css" href="css/nivo-slider.css"/>
 </head>
 <body>
 <div class="container" id="nav">
@@ -31,9 +30,14 @@
     <div class="wrapper">
         <div class="slider">
             <ul>
-                <li><img src="images/banner/banner_1.jpg" width="1130" height="515"></li>
+                <li><img src="images/banner/0.jpg" width="1130" height="515"></li>
+                <li><img src="images/banner/1.jpg" width="1130" height="515"></li>
+                <li><img src="images/banner/2.jpg" width="1130" height="515"></li>
+                <li><img src="images/banner/3.jpg" width="1130" height="515"></li>
             </ul>
         </div>
+        <a href="#" class="unslider-arrow prev">Previous slide</a>
+        <a href="#" class="unslider-arrow next">Next slide</a>
     </div>
 </div>
 <!-- banner end -->
@@ -139,9 +143,24 @@
 </div>
 <!-- contact end -->
 <script src="js/jquery.min.js"></script>
-<script src="js/nivo-slider.min.js"></script>
+<script src="js/slider.min.js"></script>
 <script type="text/javascript">
+    var unslider = $('.slider').unslider({
+        speed   : 500,               //  The speed to animate each slide (in milliseconds)
+        delay   : 3000,              //  The delay between slide animations (in milliseconds)
+        complete: function () {
 
+        },  //  A function that gets called after every slide animation
+        keys    : true,               //  Enable keyboard (left, right) arrow shortcuts
+        dots    : true,               //  Display dot navigation
+        fluid   : false              //  Support responsive design. May break non-responsive designs
+    });
+    $('.unslider-arrow').click(function () {
+        var fn = this.className.split(' ')[1];
+
+        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        unslider.data('unslider')[fn]();
+    });
 </script>
 </body>
 </html>

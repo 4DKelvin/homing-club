@@ -175,6 +175,64 @@ dd span {
 #banner {
   background : #D8DBE3;
   margin-top : 60px;
+  height     : 515px;
+}
+
+#banner .unslider-arrow {
+  text-indent   : -9999px;
+  position      : absolute;
+  top           : 40%;
+  height        : 71px;
+  width         : 71px;
+  border-radius : 71px;
+  z-index       : 100;
+}
+
+#banner .unslider-arrow.prev {
+  left             : -35px;
+  background-image : url('../images/inc_left.png');
+}
+
+#banner .unslider-arrow.next {
+  right            : -35px;
+  background-image : url('../images/inc_right.png');
+
+}
+
+#banner .slider {
+  position : relative;
+  overflow : auto;
+}
+
+#banner .slider ul li {
+  float : left;
+}
+
+#banner .dots {
+  display    : block;
+  position   : relative;
+  text-align : center;
+  top        : -100px;
+}
+
+#banner .dot {
+  display               : inline-block;
+  text-indent           : -999px;
+  height                : 10px;
+  width                 : 10px;
+  float                 : none;
+  background            : white;
+  font-size             : 0;
+  border                : 1px solid #CCCCCC;
+  margin                : 10px;
+  border-radius         : 10px;
+  -moz-border-radius    : 10px;
+  -webkit-border-radius : 10px;
+  opacity               : .5;
+}
+
+#banner .dot.active {
+  opacity : 1;
 }
 
 /* about */
