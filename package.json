@@ -1,22 +1,23 @@
 {
-  "name": "homing-club",
-  "version": "0.0.0",
-  "description": "homing",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon server.js"
+  "name"           : "homing-club",
+  "version"        : "0.0.0",
+  "description"    : "homing",
+  "main"           : "index.js",
+  "scripts"        : {
+    "start"  : "nodemon server.js",
+    "release": "cp -f ./resources /var/www/homing"
   },
-  "repository": {
+  "repository"     : {
     "type": "git",
-    "url": "git://github.com/4DKelvin/homing-club.git"
+    "url" : "git://github.com/4DKelvin/homing-club.git"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
-  "bugs": {
+  "author"         : "",
+  "license"        : "BSD-2-Clause",
+  "bugs"           : {
     "url": "https://github.com/4DKelvin/homing-club/issues"
   },
-  "homepage": "https://github.com/4DKelvin/homing-club",
-  "dependencies": {
+  "homepage"       : "https://github.com/4DKelvin/homing-club",
+  "dependencies"   : {
     "express": "^4.12.3"
   },
   "devDependencies": {}
