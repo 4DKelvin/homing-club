@@ -5,7 +5,7 @@
   "main"           : "index.js",
   "scripts"        : {
     "start"  : "nodemon server.js",
-    "release": "cp -rf resoures/* /var/www/homing/*"
+    "release": "cp -rf resoures/* /var/www/homing/"
   },
   "repository"     : {
     "type": "git",
