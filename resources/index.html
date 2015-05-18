@@ -16,11 +16,11 @@
             <span>Homing International cultural Work Camp</span>
         </div>
         <ul class="nav-bar">
-            <li><a href="#nav" class="active">首页</a></li>
-            <li><a href="#about">关于Homing</a></li>
-            <li><a href="#project">文化项目</a></li>
-            <li><a href="#team">Homing团队</a></li>
-            <li><a href="#contact">联系我们</a></li>
+            <li><a href="javascript:void(0);" target="#nav" class="active">首页</a></li>
+            <li><a href="javascript:void(0);" target="#about">关于Homing</a></li>
+            <li><a href="javascript:void(0);" target="#project">文化项目</a></li>
+            <li><a href="javascript:void(0);" target="#team">Homing团队</a></li>
+            <li><a href="javascript:void(0);" target="#contact">联系我们</a></li>
         </ul>
     </div>
 </div>
@@ -143,6 +143,7 @@
 </div>
 <!-- contact end -->
 <script src="//7xj5ab.com1.z0.glb.clouddn.com/js/jquery.min.js"></script>
+<script src="//7xj5ab.com1.z0.glb.clouddn.com/js/scrollto.min.js"></script>
 <script src="//7xj5ab.com1.z0.glb.clouddn.com/js/slider.min.js"></script>
 <script type="text/javascript">
     var unslider = $('.slider').unslider({
@@ -160,6 +161,18 @@
 
         //  Either do unslider.data('unslider').next() or .prev() depending on the className
         unslider.data('unslider')[fn]();
+    });
+    $('.nav-bar a').click(function () {
+        if ($(this).attr('target') != '#nav') {
+            $.scrollTo($($(this).attr('target')), 500, {offset: {top: -60, left: 0}});
+        } else {
+            $.scrollTo($('body'), 500, {offset: {top: -60, left: 0}});
+        }
+    });
+    $(window).on('scroll', function () {
+        var top = Number($(window).scrollTop()),
+            index = top < 515 ? 0 : top < 822 ? 1 : top < 1529 ? 2 : top < 1700 ? 3 : 4;
+        $('.nav-bar a').removeClass('active').eq(index).addClass('active');
     });
 </script>
 </body>
