@@ -4,8 +4,9 @@
   "description"    : "homing",
   "main"           : "index.js",
   "scripts"        : {
-    "start"  : "nodemon server.js",
-    "release": "cp -rf resoures/* /var/www/homing/*"
+    "start"     : "nodemon server.js",
+    "precompile": "node release.js",
+    "release"   : "cp -rf resources/* /var/www/homing/"
   },
   "repository"     : {
     "type": "git",

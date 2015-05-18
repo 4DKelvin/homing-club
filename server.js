@@ -4,4 +4,4 @@
 "use strict";
 var express = require("express"),
     app = express();
-app.use(express.static('resoures')).listen(4000);
+app.use(express.static('resources')).listen(4000);
