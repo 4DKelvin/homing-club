@@ -60,9 +60,7 @@ dd span {
 .wrapper {
   display      : block;
   position     : relative;
-  width        : 1130px;
-  margin-left  : auto;
-  margin-right : auto;
+  width        : 100%;
 }
 
 .wrapper:before,
@@ -175,7 +173,6 @@ dd span {
 #banner {
   background : #D8DBE3;
   margin-top : 60px;
-  height     : 515px;
 }
 
 #banner .unslider-arrow {
@@ -189,12 +186,12 @@ dd span {
 }
 
 #banner .unslider-arrow.prev {
-  left             : -35px;
+  left             : 10px;
   background-image : url('../images/inc_left.png');
 }
 
 #banner .unslider-arrow.next {
-  right            : -35px;
+  right            : 10px;
   background-image : url('../images/inc_right.png');
 
 }
@@ -202,17 +199,27 @@ dd span {
 #banner .slider {
   position : relative;
   overflow : auto;
+  width: 100%!important;
+  height: 100%!important;
+}
+
+#banner .slider ul {
+    height: 100%;
 }
 
 #banner .slider ul li {
   float : left;
+  width : 25%!important;
 }
 
 #banner .dots {
-  display    : block;
-  position   : relative;
-  text-align : center;
-  top        : -100px;
+    display: block;
+    text-align: center;
+    top: auto;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+
 }
 
 #banner .dot {
